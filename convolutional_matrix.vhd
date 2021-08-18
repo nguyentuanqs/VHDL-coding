@@ -1,11 +1,12 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+--- simple example of a matrix multiplier 
+--library IEEE;
+--use IEEE.STD_LOGIC_1164.ALL;
 
-package Convolution_pkg IS
-    TYPE integer_vector is ARRAY(integer RANGE <>) OF integer;
-end;
+--package Convolution_pkg IS
+--    TYPE integer_vector is ARRAY(integer RANGE <>) OF integer;
+--end;
 
-use work.Convolution_pkg.ALL;
+--use work.Convolution_pkg.ALL;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -18,8 +19,8 @@ entity convolution is
 				k_width  :integer  := 3;
 				k_height :integer  := 3);
     port (
-				clock:in std_logic;
-			new_img:out integer_vector (0 to 8)); --3*3
+				clock	:in 	std_logic;
+				new_img	:out 	integer_vector (0 to 8)); --3*3
 end convolution;
 
 architecture Behavioral of convolution is
